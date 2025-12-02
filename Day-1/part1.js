@@ -73,9 +73,9 @@ fs.readFile("01.txt","utf-8", (err,data) => {
 
     for(const move of arr){
         //console.log(`${i}th element is ${arr[i]}`);
-        const instruction = move;
-        const dir = instruction[0];
-        const steps = parseInt(instruction.substring(1),10);
+        //const instruction = move;
+        const dir = move[0];
+        const steps = parseInt(move.substring(1),10);
 
         if(dir === "L"){
             pos = (pos-steps)%100;
